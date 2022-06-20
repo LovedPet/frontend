@@ -1,6 +1,15 @@
-# Getting Started with Create React App
+# LovedPet
+O projeto foi realizado durante a disciplina de Projeto de Computação 1, no período 2021.2, com o objetivo
+de desenvolver um software para resolver um problema do mundo real, desde o levantamento dos requisitos
+até o seu deploy.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Equipe
+* Caio
+* Gabriel Brandão
+* João Antonio
+* João Vitor
+* Gutemberg
 
 ## Available Scripts
 
