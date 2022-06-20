@@ -5,11 +5,11 @@ até o seu deploy.
 
 
 ## Equipe
-* Caio
+* Caio Arruda
 * Gabriel Brandão
-* João Antonio
-* João Vitor
-* Gutemberg
+* João Bandeira
+* João Romão
+* Gutemberg Filho
 
 ## Available Scripts
 
