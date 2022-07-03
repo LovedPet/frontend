@@ -24,12 +24,15 @@
     "husky": "^8.0.1",
     "jwt-decode": "^3.1.2",
     "lint-staged": "^13.0.2",
+    "polished": "^4.2.2",
     "react": "^18.2.0",
     "react-app-rewire-alias": "^1.1.7",
     "react-dom": "^18.2.0",
     "react-hot-toast": "^2.2.0",
+    "react-input-mask": "^2.0.4",
     "react-router-dom": "^5.2.0",
     "react-scripts": "5.0.1",
+    "react-spinners": "^0.13.3",
     "ts-node": "^10.8.1",
     "ts-node-dev": "^2.0.0",
     "tsconfig-paths": "^4.0.0",
@@ -61,8 +64,15 @@
     ]
   },
   "devDependencies": {
+    "@types/react-input-mask": "^3.0.1",
     "@types/react-router-dom": "^5.3.3",
     "@types/styled-components": "^5.1.25",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.26.0",
+    "eslint-plugin-import-helpers": "^1.2.1",
+    "eslint-plugin-prettier": "^4.2.1",
+    "react-app-rewired": "^2.2.1",
     "styled-components": "^5.3.5"
   }
 }
