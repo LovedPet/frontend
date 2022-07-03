@@ -1,4 +1,4 @@
-import * as pages from '@pages';
+import * as pages from '../pages/index';
 import { RouteProps as ReactDOMRouterProps } from 'react-router-dom';
 
 interface RouteProps extends ReactDOMRouterProps {
