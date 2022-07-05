@@ -1,8 +1,7 @@
-
 import { parseToRgb } from 'polished';
 
 export const colors = {
-  primary: '#008D64',
+  primary: '#DA7474',
   lightPrimary: '#CAE4DB',
   black: '#131735',
   kindaGrey: '#4E5268',
@@ -24,7 +23,7 @@ export const colors = {
   lightShadow: 'rgba(0, 0, 0, 0.15)',
 
   // Grades
-  plus900: '#008D64',
+  plus900: '#DA7474',
   plus800: '#169E94',
   plus700: '#2796B0',
   plus600: '#398ECC',
@@ -40,7 +39,7 @@ export const colors = {
 };
 
 export const gradeColors = {
-  plus900: '#008D64',
+  plus900: '#DA7474',
   plus800: '#169E94',
   plus700: '#2796B0',
   plus600: '#398ECC',
