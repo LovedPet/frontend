@@ -15,11 +15,6 @@ export const ButtonContainer = styled.button<ButtonContainerProps>`
   height: 44px;
   background: ${({ decline }) =>
     decline ? colors.errorBorder : colors.primary};
-  box-shadow: 0px 4px 16px
-    ${({ decline }) =>
-      decline
-        ? colorWithTransparency(colors.error, 0.25)
-        : 'rgba(4, 167, 119, 0.25)'};
   border-radius: 10px;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   transition: all 200ms ease-in-out;
