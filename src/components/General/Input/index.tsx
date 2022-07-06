@@ -1,7 +1,6 @@
-
+import React, { useState, useEffect } from 'react';
 import { General, Input as InputInterface } from '../../../definitions';
 import { Wrapper } from '../../../styles/general';
-import React, { useState, useEffect } from 'react';
 import { InputContainer, InputMaskContainer, ErrorMessage } from './styles';
 
 interface InputProps {

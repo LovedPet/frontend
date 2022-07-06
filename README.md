@@ -1,15 +1,16 @@
 # LovedPet
+
 O projeto foi realizado durante a disciplina de Projeto de Computação 1, no período 2021.2, com o objetivo
 de desenvolver um software para resolver um problema do mundo real, desde o levantamento dos requisitos
 até o seu deploy.
 
-
 ## Equipe
-* Caio Arruda
-* Gabriel Brandão
-* João Bandeira
-* João Romão
-* Gutemberg Filho
+
+- Caio Arruda
+- Gabriel Brandão
+- João Bandeira
+- João Romão
+- Gutemberg Filho
 
 ## Available Scripts
 

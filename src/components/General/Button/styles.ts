@@ -1,6 +1,6 @@
-import { colors, colorWithTransparency } from '../../../styles/colors';
-import { darken } from 'polished';
 import styled from 'styled-components';
+import { darken } from 'polished';
+import { colors, colorWithTransparency } from '../../../styles/colors';
 
 interface ButtonContainerProps {
   decline: boolean;

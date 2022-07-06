@@ -20,6 +20,7 @@ const Login: React.FC = () => {
     validation: (value: string) => value,
   });
   const [isLoading, setIsLoading] = useState(false);
+  const [validated, setValidated] = useState(true);
 
   const handleEmail = (event: React.ChangeEvent<HTMLInputElement>) => {
     const { value } = event.target;
@@ -31,18 +32,20 @@ const Login: React.FC = () => {
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
-  }
+  };
 
   return (
     <CenteredContainer onSubmit={handleSubmit}>
       <img src={Logo} alt="Logo da Loved Ped" />
-      <Header>Acesse sua conta e comece a administrar sua creche de PET's!</Header>
+      <Header>
+        Acesse sua conta e comece a administrar sua creche de PETs!
+      </Header>
       <Form>
         <Input
           entity={email}
           label="Email"
           type="email"
-          validated={true}
+          validated={validated}
           placeholder="Digite seu e-mail"
           onChange={handleEmail}
         />
@@ -50,7 +53,7 @@ const Login: React.FC = () => {
           entity={password}
           label="Senha"
           type="password"
-          validated={true}
+          validated={validated}
           placeholder="Digite sua senha"
           onChange={() => console.log('foda')}
         />

@@ -1,9 +1,7 @@
 {
   "noImplicitAny": false,
   "extends": "./tsconfig.paths.json",
-  "include": [
-    "src"
-  ],
+  "include": ["src"],
   "compilerOptions": {
     "module": "esnext",
     "moduleResolution": "node",

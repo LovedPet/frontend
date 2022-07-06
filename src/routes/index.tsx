@@ -1,9 +1,6 @@
 import React from 'react';
 import { Route, BrowserRouter, Switch, Redirect } from 'react-router-dom';
-import {
-  publicRouteList
-} from './routeList';
-
+import { publicRouteList } from './routeList';
 
 const Routes: React.FC = () => {
   const publicRouteComponents = publicRouteList.map(
@@ -27,7 +24,7 @@ const Routes: React.FC = () => {
     <BrowserRouter>
       <Switch>
         {publicRouteComponents}
-        <Redirect to="/login"/>
+        <Redirect to="/login" />
       </Switch>
     </BrowserRouter>
   );

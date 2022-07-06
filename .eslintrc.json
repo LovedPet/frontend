@@ -54,9 +54,7 @@
     "import/prefer-default-export": "off",
     "react/jsx-props-no-spreading": "off",
     "@typescript-eslint/ban-types": "off",
-    "@typescript-eslint/explicit-function-return-type": [
-      "off"
-    ],
+    "@typescript-eslint/explicit-function-return-type": ["off"],
     "@typescript-eslint/no-unused-vars": [
       "warn",
       {
@@ -65,9 +63,12 @@
     ],
     "no-underscore-dangle": "off",
     "@typescript-eslint/camelcase": "off",
-    "prettier/prettier": ["error", {
-      "endOfLine":"auto"
-    }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ],
     "import-helpers/order-imports": [
       "warn",
       {
@@ -84,12 +85,7 @@
   "settings": {
     "import/resolver": {
       "node": {
-        "extensions": [
-          ".js",
-          ".jsx",
-          ".ts",
-          ".tsx"
-        ]
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
   }

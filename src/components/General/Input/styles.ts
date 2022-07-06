@@ -1,7 +1,6 @@
-
-import { colors } from '../../../styles/colors';
-import InputMask from 'react-input-mask';
 import styled from 'styled-components';
+import InputMask from 'react-input-mask';
+import { colors } from '../../../styles/colors';
 
 interface InputContainerProps {
   error?: boolean;

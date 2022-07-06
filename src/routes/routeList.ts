@@ -1,5 +1,5 @@
-import * as pages from '../pages/index';
 import { RouteProps as ReactDOMRouterProps } from 'react-router-dom';
+import * as pages from '../pages/index';
 
 interface RouteProps extends ReactDOMRouterProps {
   path: string;
@@ -7,7 +7,6 @@ interface RouteProps extends ReactDOMRouterProps {
   exact: boolean;
   title: string;
 }
-
 
 export const publicRouteList: RouteProps[] = [
   {
@@ -21,6 +20,5 @@ export const publicRouteList: RouteProps[] = [
     component: pages.Register,
     exact: true,
     title: 'Cadastro',
-  }
-
-]
+  },
+];

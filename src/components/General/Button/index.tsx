@@ -29,7 +29,7 @@ const Button: React.FC<ButtonProps> = ({
     >
       {isLoading ? <PulseLoader color="#fff" size={10} /> : children || text}
     </ButtonContainer>
-  )
-}
+  );
+};
 
 export default Button;

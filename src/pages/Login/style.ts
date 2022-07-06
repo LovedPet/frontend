@@ -10,5 +10,4 @@ export const Header = styled.head`
   img {
     max-height: 150px;
   }
-
 `;
