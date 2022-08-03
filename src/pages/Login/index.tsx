@@ -46,10 +46,11 @@ const Login: React.FC = () => {
     try {
       setIsLoading(true);
 
-      const response = await login(email.value, password.value);
-      console.log('Resposta', response)
+      await login(email.value, password.value);
+      // console.log('Resposta', response)
 
       toast.success('Logado com sucesso!');
+      console.log('finish')
       // history.go(0);
     } catch (error) {
       throw error

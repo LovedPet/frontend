@@ -46,12 +46,12 @@ export const login = (email: string, password: string): Promise<any> => {
   return api.post(
     '/login',
     {
-      email,
-      password
+      "email":email,
+      "password": password
     }
   )
     .then((res) => {
-      const { access_token } = res.data;
+      // const { access_token } = res.data;
       console.log('Fez login ein')
       // const user: any = jwt(access_token);
 
@@ -63,6 +63,7 @@ export const login = (email: string, password: string): Promise<any> => {
 }
 
 export const register = (data: any): Promise<any> => {
+  console.log('OLha os dadossss ', data)
   return api.post(
     '/register',
     data
