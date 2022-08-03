@@ -3,21 +3,24 @@ import { Button, Input } from '../../components/General';
 import { General } from '../../definitions';
 import Logo from '../../assets/logo.png';
 // import Logo from '../../assets';
+import toast from 'react-hot-toast';
 import {
   CenteredContainer,
   LinksContainer,
   Form,
   Header,
 } from '../../styles/general';
+import { login } from '../../services/api';
+import { validateEmail, validateText } from '../../utils/validations';
 
 const Login: React.FC = () => {
   const [email, setEmail] = useState<General.Value>({
     ...General.initialValue,
-    validation: (value: string) => value,
+    validation: (value: string) => validateEmail(value),
   });
   const [password, setPassword] = useState<General.Value>({
     ...General.initialValue,
-    validation: (value: string) => value,
+    validation: (value: string) => validateText(value, 'senha'),
   });
   const [isLoading, setIsLoading] = useState(false);
   const [validated, setValidated] = useState(true);
@@ -30,8 +33,27 @@ const Login: React.FC = () => {
     setEmail({ ...email, value, invalidity });
   };
 
+  const handlePassword = (event: React.ChangeEvent<HTMLInputElement>) =>{
+    const { value } = event.target
+    const invalidity = ''
+
+    setPassword({ ...password, value, invalidity})
+  }
+
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
+
+    try {
+      setIsLoading(true);
+
+      const response = await login(email.value, password.value);
+      console.log('Resposta', response)
+
+      toast.success('Logado com sucesso!');
+      // history.go(0);
+    } catch (error) {
+      throw error
+    }
   };
 
   return (
@@ -55,7 +77,7 @@ const Login: React.FC = () => {
           type="password"
           validated={validated}
           placeholder="Digite sua senha"
-          onChange={() => console.log('foda')}
+          onChange={handlePassword}
         />
         <Button text="Acessar" typeButton="submit" isLoading={isLoading} />
       </Form>

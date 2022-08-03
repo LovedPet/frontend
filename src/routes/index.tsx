@@ -18,13 +18,15 @@ const Routes: React.FC = () => {
     },
   );
 
+
+
   // const authenticated = isLogged();
 
   return (
     <BrowserRouter>
       <Switch>
         {publicRouteComponents}
-        <Redirect to="/login" />
+        <Redirect to="/register" />
       </Switch>
     </BrowserRouter>
   );
