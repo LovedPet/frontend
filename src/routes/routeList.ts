@@ -21,4 +21,10 @@ export const publicRouteList: RouteProps[] = [
     exact: true,
     title: 'Cadastro',
   },
+  {
+    path: '/scheduler',
+    component: pages.Scheduler,
+    exact: true,
+    title: 'Scheduler'
+  }
 ];
