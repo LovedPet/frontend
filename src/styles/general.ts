@@ -39,6 +39,19 @@ export const CenteredContainer = styled.div<CenteredContainerProps>`
   margin-bottom: 64px;
 `;
 
+export const CenteredContainerSched = styled.div<CenteredContainerProps>`
+  display: flex;
+  flex-wrap: wrap;
+  padding: 32px;
+  width: calc(100vw - 64px);
+  max-width: 500px;
+  h2 {
+    font-size: 1.5rem;
+  }
+  margin-bottom: 64px;
+`;
+
+
 export const Header = styled.h3`
   font-size: 1.25rem;
   font-weight: 500;
