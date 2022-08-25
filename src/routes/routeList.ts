@@ -21,4 +21,22 @@ export const publicRouteList: RouteProps[] = [
     exact: true,
     title: 'Cadastro',
   },
+  { // Mudar depois para rota privada
+    path: '/main',
+    component: pages.Main,
+    exact: true,
+    title: 'Principal',
+  },
+  { // Mudar depois para rota privada
+    path: '/configurations',
+    component: pages.Configurations,
+    exact: true,
+    title: 'Configuração',
+  },
+  { // Mudar depois para rota privada
+    path: '/scheduler',
+    component: pages.Scheduler,
+    exact: true,
+    title: 'Agendamento',
+  },
 ];

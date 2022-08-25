@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useHistory } from 'react-router-dom';
 import { Button, Input } from '../../components/General';
 import { General } from '../../definitions';
 import Logo from '../../assets/logo.png';
@@ -14,6 +15,8 @@ import { login } from '../../services/api';
 import { validateEmail, validateText } from '../../utils/validations';
 
 const Login: React.FC = () => {
+  const navigate = useHistory()
+
   const [email, setEmail] = useState<General.Value>({
     ...General.initialValue,
     validation: (value: string) => validateEmail(value),
@@ -51,15 +54,20 @@ const Login: React.FC = () => {
 
       toast.success('Logado com sucesso!');
       console.log('finish')
-      // history.go(0);
+      navigate.push('/main')
     } catch (error) {
       throw error
     }
   };
 
+  const _navigateToRegister = () => navigate.push('/register');
+
+
   return (
     <CenteredContainer onSubmit={handleSubmit}>
-      <img src={Logo} alt="Logo da Loved Ped" />
+      <LinksContainer>
+        <img src={Logo} alt="Logo da Loved Ped" />
+      </LinksContainer>
       <Header>
         Acesse sua conta e comece a administrar sua creche de PETs!
       </Header>
@@ -82,6 +90,7 @@ const Login: React.FC = () => {
         />
         <Button text="Acessar" typeButton="submit" isLoading={isLoading} />
       </Form>
+      <button onClick={_navigateToRegister} >Desejo me cadastrar</button>
     </CenteredContainer>
   );
 };

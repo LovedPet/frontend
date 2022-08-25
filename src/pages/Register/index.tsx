@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
-import { useHistory } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import toast from 'react-hot-toast';
 import { validateEmail, validateText} from '../../utils/validations';
-import { CenteredContainer, Form, Header } from '../../styles/general';
-import { Button, Input } from '../../components/General';
+import {
+  CenteredContainer,
+  Form,
+  Header,
+  LinksContainer,
+} from '../../styles/general';
+import {
+  Button,
+  Input,
+} from '../../components/General';
 import Logo from '../../assets/logo.png';
 import { General } from '../../definitions';
 import { register } from '../../services/api';
@@ -77,10 +85,14 @@ const Register: React.FC = () => {
     setName({ ...name, value, invalidity });
   };
 
+  const _navigateToLogin = () => history.push('/login');
+
   return (
     <>
       <CenteredContainer onSubmit={handleSubmit}>
-        <img src={Logo} alt="Logo da Loved Ped" />
+        <LinksContainer>
+          <img src={Logo} alt="Logo da Loved Ped" />
+        </LinksContainer>
         <Header>Crie sua conta</Header>
         <Form>
           <Input
@@ -109,6 +121,8 @@ const Register: React.FC = () => {
           />
           <Button text="Cadastrar" typeButton="submit" isLoading={isLoading} />
         </Form>
+        <button onClick={_navigateToLogin} >Ir para o login</button>
+
       </CenteredContainer>
     </>
   );

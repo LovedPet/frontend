@@ -11,6 +11,8 @@ const errorBorder = `1px solid ${colors.errorBorder}`;
 const focusBorder = `1px solid ${colors.focusBorder}`;
 
 export const InputMaskContainer = styled(InputMask)<InputContainerProps>`
+  -webkit-appearance: none;
+  margin: 0;
   background-color: #fff;
   height: 48px;
   padding-left: 12px;

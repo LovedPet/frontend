@@ -5,4 +5,5 @@ export type InputTypes =
   | 'password'
   | 'date'
   | 'search'
-  | 'url';
+  | 'url'
+  | 'checkbox';

@@ -51,5 +51,14 @@ export const Form = styled.form`
 
 export const LinksContainer = styled.div`
   display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+
+export const ContainerHour = styled.div`
+  display: flex;
+  align-items: flex-stretch;
   justify-content: space-between;
+  flex-wrap: wrap;
+  flex:1;
 `;
