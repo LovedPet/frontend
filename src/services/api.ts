@@ -108,4 +108,13 @@ export const scheduler = (data: any): Promise<any> => {
 
 }
 
+export const getSchedulers = (): Promise<any> => {
+  // let url = `/:${data.user_id}/configurations`
+  const user = localStorage.getItem('user_id')
+  return api.get(
+    `/${user}/scheduler?separate=false`
+  )
+
+}
+
 export default api;

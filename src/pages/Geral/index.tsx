@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Logo from '../../assets/logo.png';
 import {
   CenteredContainer,
@@ -10,15 +10,29 @@ import {
 } from '../../components/General';
 import { useHistory } from 'react-router';
 import { Div } from './styles';
-
+import { getSchedulers } from '../../services/api'
 const hours = [9,10,11,12,13,14,15,16,17,18]
-const ocupation = '4/5'
+const ocupation = '/5'
 
 const date = '31/08'
 
 const Geral: React.FC = () => {
   const history = useHistory();
   const [isLoading, setIsLoading] = useState(false);
+  const [sched, setSched] = useState<any[]>([])
+
+  useEffect(() => {
+    const fetch = async () => {
+      try {
+        const x = await getSchedulers()
+        setSched(x.data)
+      } catch (error) {
+        throw error
+      }
+    }
+
+    fetch()
+  }, [])
 
   return (
     <CenteredContainer>
@@ -29,7 +43,9 @@ const Geral: React.FC = () => {
         Seus agendamentos - {date}
       </Header>
         {hours.map((h) => {
-            return <Div><h1>{String(h)+'h'}</h1><h1>{ocupation}</h1></Div>
+            const filtered = sched.filter((a) => a.hour === h)
+            console.log('Filtrado ', filtered.length)
+            return <Div><h1>{String(h)+'h'}</h1><h1>{filtered.length + ocupation}</h1></Div>
 
           })}
 
