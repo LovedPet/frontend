@@ -24,7 +24,7 @@ const Main: React.FC = () => {
       </Header>
 
         <Button text="Configurações" typeButton="submit" onClick={() => history.push('/configurations')}/>
-        <Button text="Agendamentos" typeButton="submit" isLoading={isLoading} />
+        <Button text="Agendamentos" typeButton="submit" onClick={() => history.push('/geral')} isLoading={isLoading} />
     </CenteredContainer>
 
   )
