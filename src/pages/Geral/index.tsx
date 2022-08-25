@@ -10,7 +10,7 @@ import {
 } from '../../components/General';
 import { useHistory } from 'react-router';
 import { Div } from './styles';
-import { getSchedulers } from '../../services/api'
+import { getSchedulers, getConfigurate } from '../../services/api'
 const hours = [9,10,11,12,13,14,15,16,17,18]
 const ocupation = '/5'
 
@@ -20,12 +20,16 @@ const Geral: React.FC = () => {
   const history = useHistory();
   const [isLoading, setIsLoading] = useState(false);
   const [sched, setSched] = useState<any[]>([])
+  const [petLimits, setPetLimits] = useState(0)
 
   useEffect(() => {
     const fetch = async () => {
       try {
         const x = await getSchedulers()
+        const y = await getConfigurate()
+        console.log("aaaaa ", y.data.pet_limits)
         setSched(x.data)
+        setPetLimits(y.data.pet_limits)
       } catch (error) {
         throw error
       }
@@ -45,7 +49,7 @@ const Geral: React.FC = () => {
         {hours.map((h) => {
             const filtered = sched.filter((a) => a.hour === h)
             console.log('Filtrado ', filtered.length)
-            return <Div><h1>{String(h)+'h'}</h1><h1>{filtered.length + ocupation}</h1></Div>
+            return <Div><h1>{String(h)+'h'}</h1><h1>{filtered.length + '/' + petLimits}</h1></Div>
 
           })}
 
