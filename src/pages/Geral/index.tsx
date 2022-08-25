@@ -33,8 +33,7 @@ const Geral: React.FC = () => {
 
           })}
 
-        {/* <Button text="Configurações" typeButton="submit" onClick={() => history.push('/configurations')}/>
-        <Button text="Agendamentos" typeButton="submit" isLoading={isLoading} /> */}
+        <Button text="Voltar" typeButton="submit" onClick={() => history.push('/main')}/>
     </CenteredContainer>
 
   )
