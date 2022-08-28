@@ -1,5 +1,6 @@
 
 import React, { useEffect, useState } from 'react';
+import moment from 'moment';
 import Logo from '../../assets/logo.png';
 import {
   CenteredContainer,
@@ -19,6 +20,8 @@ import { useHistory } from 'react-router';
 
 
 const hours = [9,10,11,12,13,14,15,16,17,18]
+
+const actualDate = moment().format("MMMM Do YYYY"); // "Sunday, February 14th 2010, 3:25:50 pm"
 
 const Scheduler: React.FC = () => {
   const history = useHistory();
@@ -123,7 +126,10 @@ const Scheduler: React.FC = () => {
         <img src={Logo} alt="Logo da Loved Ped" />
       </LinksContainer>
       <Header>
-        Bem vindo, realize seu agendamento!
+        Bem vindo, realize seu agendamento:
+        <br/>
+        <br/>
+        {actualDate}
       </Header>
       <ContainerHour onSubmit={handleSubmit}>
         {closed && hours.map((h) => {
