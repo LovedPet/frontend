@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Logo from '../../assets/logo.png';
+import moment from 'moment';
 import {
   CenteredContainer,
   Header,
@@ -11,10 +12,12 @@ import {
 import { useHistory } from 'react-router';
 import { Div } from './styles';
 import { getSchedulers, getConfigurate } from '../../services/api'
-const hours = [9,10,11,12,13,14,15,16,17,18]
+const hours = [9, 10, 11, 12, 13, 14, 15, 16, 17, 18]
 const ocupation = '/5'
 
 const date = '31/08'
+const actualDate = moment().format("MMMM Do YYYY"); // "Sunday, February 14th 2010, 3:25:50 pm"
+
 
 const Geral: React.FC = () => {
   const history = useHistory();
@@ -44,16 +47,16 @@ const Geral: React.FC = () => {
         <img src={Logo} alt="Logo da Loved Ped" />
       </LinksContainer>
       <Header>
-        Seus agendamentos - {date}
+        Seus agendamentos - {actualDate}
       </Header>
-        {hours.map((h) => {
-            const filtered = sched.filter((a) => a.hour === h)
-            console.log('Filtrado ', filtered.length)
-            return <Div><h1>{String(h)+'h'}</h1><h1>{filtered.length + '/' + petLimits}</h1></Div>
+      {hours.map((h) => {
+        const filtered = sched.filter((a) => a.hour === h)
+        console.log('Filtrado ', filtered.length)
+        return <Div><h1>{String(h) + 'h'}</h1><h1>{filtered.length + '/' + petLimits}</h1></Div>
 
-          })}
+      })}
 
-        <Button text="Voltar" typeButton="submit" onClick={() => history.push('/main')}/>
+      <Button text="Voltar" typeButton="submit" onClick={() => history.push('/main')} />
     </CenteredContainer>
 
   )
