@@ -29,10 +29,10 @@ const Geral: React.FC = () => {
     const fetch = async () => {
       try {
         const x = await getSchedulers()
-        const y = await getConfigurate()
-        console.log("aaaaa ", y.data.pet_limits)
+        // const y = await getConfigurate()
+        // console.log("aaaaa ", y.data.pet_limits)
         setSched(x.data)
-        setPetLimits(y.data.pet_limits)
+        // setPetLimits(y.data.pet_limits)
       } catch (error) {
         throw error
       }
@@ -52,7 +52,7 @@ const Geral: React.FC = () => {
       {hours.map((h) => {
         const filtered = sched.filter((a) => a.hour === h)
         console.log('Filtrado ', filtered.length)
-        return <Div><h1>{String(h) + 'h'}</h1><h1>{filtered.length + '/' + petLimits}</h1></Div>
+        return <Div><h1>{String(h) + 'h'}</h1><h1>{filtered.length + '/' + 5}</h1></Div>
 
       })}
 
