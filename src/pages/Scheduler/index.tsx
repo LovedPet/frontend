@@ -37,6 +37,18 @@ const Scheduler: React.FC = () => {
     ...General.initialValue,
     validation: (value: string) => value,
   });
+  const [addressPetOwner, setAddressPetOwner] = useState<General.Value>({
+    ...General.initialValue,
+    validation: (value: string) => value,
+  });
+  const [racePet, setRacePet] = useState<General.Value>({
+    ...General.initialValue,
+    validation: (value: string) => value,
+  });
+  const [weightPet, setWeightPet] = useState<General.Value>({
+    ...General.initialValue,
+    validation: (value: string) => value,
+  });
   const [tag, setTag] = useState('');
   const [info, setInfo] = useState<General.Value>({
     ...General.initialValue,
@@ -59,6 +71,30 @@ const Scheduler: React.FC = () => {
     const invalidity = '';
 
     setPetOwner({ ...petOwner, value, invalidity });
+  };
+
+  const handleAddressPetOwner = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+
+    const invalidity = '';
+
+    setRacePet({ ...petName, value, invalidity });
+  };
+
+  const handleRacePet = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+
+    const invalidity = '';
+
+    setAddressPetOwner({ ...petName, value, invalidity });
+  };
+
+  const handleWeightPet = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const { value } = event.target;
+
+    const invalidity = '';
+
+    setWeightPet({ ...petName, value, invalidity });
   };
 
   const handleTag = (event: SelectChangeEvent) => {
@@ -158,6 +194,27 @@ const Scheduler: React.FC = () => {
                 placeholder="Digite o seu nome"
                 onChange={handlePetOwner}
               />
+              <Input
+                entity={addressPetOwner}
+                label="Endereço do Dono do Pet"
+                type="text"
+                placeholder="Digite o endereço do dono do pet"
+                onChange={handleAddressPetOwner}
+              />
+              <Input
+                entity={racePet}
+                label="Raça do Pet"
+                type="text"
+                placeholder="Digite a raça do seu pet"
+                onChange={handleRacePet}
+              />
+              <Input
+                entity={weightPet}
+                label="Peso do Pet"
+                type="text"
+                placeholder="Digite o peso do seu pet"
+                onChange={handleWeightPet}
+              />
               <InputLabel id="demo-simple-select-label">Como voce define o comportamento do seu Pet?</InputLabel>
               <Select
                 key={tag}
@@ -191,7 +248,6 @@ const Scheduler: React.FC = () => {
             <button onClick={() => setTimeout(() => window.location.reload(), 1000)} >Voltar</button>
 
           </CenteredContainer>
-
 
         }
 
