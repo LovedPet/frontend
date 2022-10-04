@@ -78,7 +78,8 @@ const Scheduler: React.FC = () => {
 
     const invalidity = '';
 
-    setRacePet({ ...petName, value, invalidity });
+    setAddressPetOwner({ ...petName, value, invalidity });
+
   };
 
   const handleRacePet = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -86,7 +87,8 @@ const Scheduler: React.FC = () => {
 
     const invalidity = '';
 
-    setAddressPetOwner({ ...petName, value, invalidity });
+    setRacePet({ ...petName, value, invalidity });
+
   };
 
   const handleWeightPet = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -142,6 +144,9 @@ const Scheduler: React.FC = () => {
           pet_info: {
             pet_name: petName.value,
             pet_owner: petOwner.value,
+            address_owner_pet: addressPetOwner.value,
+            race_pet: racePet.value,
+            weight_pet: weightPet.value
           },
           tag,
           hour,
