@@ -105,7 +105,6 @@ export const scheduler = (data: any): Promise<any> => {
     `/${user}/scheduler`,
     data
   )
-
 }
 
 export const getSchedulers = (): Promise<any> => {
@@ -113,6 +112,15 @@ export const getSchedulers = (): Promise<any> => {
   const user = localStorage.getItem('user_id')
   return api.get(
     `/${user}/scheduler?separate=false`
+  )
+
+}
+
+export const getPets = (): Promise<any> => {
+  // let url = `/:${data.user_id}/configurations`
+  const user = localStorage.getItem('user_id')
+  return api.get(
+    `/${user}/scheduler?all_pets=true`
   )
 
 }

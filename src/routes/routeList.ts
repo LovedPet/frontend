@@ -40,6 +40,12 @@ export const publicRouteList: RouteProps[] = [
     title: 'Agendamento',
   },
   { // Mudar depois para rota privada
+    path: '/pets',
+    component: pages.Pets,
+    exact: true,
+    title: 'Pets',
+  },
+  { // Mudar depois para rota privada
     path: '/geral',
     component: pages.Geral,
     exact: true,

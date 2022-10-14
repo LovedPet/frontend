@@ -26,6 +26,7 @@ const Main: React.FC = () => {
         <Button text="Configurações" typeButton="submit" onClick={() => history.push('/configurations')}/>
         <Button text="Agendamentos" typeButton="submit" onClick={() => history.push('/geral')} isLoading={isLoading} />
         <Button text="Agendar - Para clientes" typeButton="submit" onClick={() => window.open('/scheduler', '_blank')}/>
+        <Button text="Pets cadastrados no sistema" typeButton="submit" onClick={() => history.push('/pets')}/>
     </CenteredContainer>
 
   )
