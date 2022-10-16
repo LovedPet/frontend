@@ -7,6 +7,9 @@ import {
   LinksContainer,
   Header
 } from '../../styles/general';
+import {
+  Button
+} from '../../components/General'
 import { scheduler, getConfigurate } from '../../services/api';
 import { useHistory } from 'react-router';
 import { getPets } from '../../services/api'
@@ -37,6 +40,7 @@ const Pets: React.FC = () => {
   }, [])
 
   const _navigateToMenu = () => history.push('/main');
+  const actualDate = moment().format("MMMM Do YYYY"); // "Sunday, February 14th 2010, 3:25:50 pm"
 
   return (
     <CenteredContainer>
@@ -44,7 +48,7 @@ const Pets: React.FC = () => {
         <img src={Logo} alt="Logo da Loved Ped" />
       </LinksContainer>
       <Header>
-        Relatório do Sistema
+        Relatório do Sistema - {actualDate}
       </Header>
       <h3>Pets cadastrados: {pets.length}</h3>
       <h3>Valor cobrado por agendamento: {price}</h3>
@@ -72,7 +76,7 @@ const Pets: React.FC = () => {
           }) :
           <h1>O sistema ainda não possui PETs no sistema</h1>
         }
-        <button onClick={_navigateToMenu} >Voltar ao menu</button>
+        <Button text="Voltar" typeButton="submit" onClick={_navigateToMenu} />
       </>
     </CenteredContainer>
 
