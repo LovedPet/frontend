@@ -28,3 +28,9 @@ export const ButtonHour = styled.button<ButtonContainerProps>`
       : darken(0.05, colors.primary)};
   }
 `;
+
+export const PetInfo = styled.div`
+  border-radius: 8px;
+  padding: 15px;
+  background-color: ${colors.offWhite};
+`

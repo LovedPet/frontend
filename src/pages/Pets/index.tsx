@@ -18,6 +18,7 @@ import toast from 'react-hot-toast';
 import { scheduler, getConfigurate } from '../../services/api';
 import { useHistory } from 'react-router';
 import { getPets } from '../../services/api'
+import { PetInfo } from './styles'
 
 
 const actualDate = moment().format("MMMM Do YYYY"); // "Sunday, February 14th 2010, 3:25:50 pm"
@@ -67,7 +68,19 @@ const Pets: React.FC = () => {
           pets.map((p) => {
             p = JSON.parse(p.pet_info)
             console.log('Cadeee ', p)
-            return (<h1>{p.pet_name}</h1>)
+            return (
+              <PetInfo>
+                <p>
+                  <b>Nome do Pet:</b> {p.pet_name}
+                </p>
+                <p>
+                  <b>Nome do Dono:</b> {p.pet_owner}
+                </p>
+                <p>
+                  <b>Raça:</b> {p.race_pet}
+                </p>
+              </PetInfo>
+            )
           }) :
           <h1>O sistema ainda não possui PETs no sistema</h1>
         }
