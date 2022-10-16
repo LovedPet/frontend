@@ -82,7 +82,7 @@ interface Configuration {
 
 export const configurate = (data: any): Promise<any> => {
   const user = localStorage.getItem('user_id')
-  let url = `/:${user}/configurations`
+  let url = `/${user}/configurations`
   return api.post(
     url,
     data

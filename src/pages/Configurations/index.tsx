@@ -63,19 +63,17 @@ const Configurations: React.FC = () => {
     try {
       setIsLoading(true);
 
-      // await configurate({
-      //   pet_limits: petLimits.value,
-      //   value_hour: valueHour.value,
-      //   scheduler_active: scheduler.value
-      // })
+      await configurate({
+        pet_limits: petLimits.value,
+        value_hour: valueHour.value,
+        scheduler_active: true
+      })
 
       console.log('Printando, ', {
         pet_limits: petLimits.value,
         value_hour: valueHour.value,
         scheduler_active: scheduler.value
       })
-      // await login(email.value, password.value);
-      // console.log('Resposta', response)
 
       toast.success('Salvo com sucesso!');
       console.log('finish')

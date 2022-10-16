@@ -8,7 +8,7 @@ interface ButtonContainerProps {
   isDisabled: boolean;
 }
 
-export const ButtonHour = styled.button<ButtonContainerProps>`
+export const ButtonHour = styled.button`
   display: grid;
   place-items: center;
   color: #fff;
@@ -16,17 +16,11 @@ export const ButtonHour = styled.button<ButtonContainerProps>`
   margin-bottom: 10px;
   font-weight: 600;
   height: 34px;
-  width: 64px;
+  width: 456px;
   background: ${colors.primary};
   border-radius: 10px;
   cursor: ${({ disabled }) => (disabled ? 'not-allowed' : 'pointer')};
   transition: all 200ms ease-in-out;
-  :hover {
-    background-color: ${({ decline }) =>
-    decline
-      ? darken(0.05, colors.errorBorder)
-      : darken(0.05, colors.primary)};
-  }
 `;
 
 export const PetInfo = styled.div`

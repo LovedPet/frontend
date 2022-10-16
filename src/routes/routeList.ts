@@ -40,7 +40,7 @@ export const publicRouteList: RouteProps[] = [
     title: 'Agendamento',
   },
   { // Mudar depois para rota privada
-    path: '/pets',
+    path: '/relatorio',
     component: pages.Pets,
     exact: true,
     title: 'Pets',
