@@ -51,4 +51,10 @@ export const publicRouteList: RouteProps[] = [
     exact: true,
     title: 'Agendamentos',
   },
+  { // Mudar depois para rota privada
+    path: '/tutorial',
+    component: pages.Tutorial,
+    exact: true,
+    title: 'Tutorial',
+  },
 ];

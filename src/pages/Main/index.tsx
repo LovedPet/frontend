@@ -27,6 +27,7 @@ const Main: React.FC = () => {
         <Button text="Agendamentos" typeButton="submit" onClick={() => history.push('/geral')} isLoading={isLoading} />
         <Button text="Agendar - Para clientes" typeButton="submit" onClick={() => window.open('/scheduler', '_blank')}/>
         <Button text="Relatório Mensal" typeButton="submit" onClick={() => history.push('/relatorio')}/>
+        <Button text="Tutorial de Uso" typeButton="submit" onClick={() => history.push('/tutorial')}/>
     </CenteredContainer>
 
   )
