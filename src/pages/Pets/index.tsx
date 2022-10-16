@@ -36,6 +36,7 @@ const Pets: React.FC = () => {
     fetch()
   }, [])
 
+  const _navigateToMenu = () => history.push('/main');
 
   return (
     <CenteredContainer>
@@ -71,6 +72,7 @@ const Pets: React.FC = () => {
           }) :
           <h1>O sistema ainda não possui PETs no sistema</h1>
         }
+        <button onClick={_navigateToMenu} >Voltar ao menu</button>
       </>
     </CenteredContainer>
 
